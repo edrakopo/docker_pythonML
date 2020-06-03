@@ -10,7 +10,8 @@ RUN python -m pip install \
         pandas \
         tensorflow \
         matplotlib \
-        sklearn
+        sklearn \
+        seaborn 
 
 ### Open terminal
 CMD ["/bin/bash"]
