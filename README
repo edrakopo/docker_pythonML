@@ -5,5 +5,6 @@ The master branch creates and runs a docker container for python 3.7.7. with som
 The python_inLinux branch creates and runs a docker container for python 2.7.5 and 3.6.8. in a linux environment (you also have some linux-based commands such as wget, git, gcc etc). 
 
 For quick installation check the "InstallationNotes" on each branch. 
+To see which libraries are installed check the Dockerfile.
 
 These platforms can be used to easily test python-based projects without having to install libraries and dependencies in your system.
