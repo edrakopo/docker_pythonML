@@ -11,3 +11,7 @@ docker run --name=Python_3.6inLinux_ML  -v local_folder:/name_in_container -it p
 #Now the container is created you dont need to do run any more
 #To start it at any time just open a terminal and type 
 docker start Python_3.6inLinux_ML -i
+
+#To chack if necessary python libraries exist and if not install them:
+source Setup.sh 
+  
