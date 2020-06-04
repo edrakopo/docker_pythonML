@@ -1,5 +1,5 @@
 This project creates and runs a docker container for python 2.7.5 and 3.6.8. in a linux environment. 
 Type: "source Setup.sh" to install some basic python libraries (numpy, pandas, tensorflow, matplotlib, sklearn, etc.). 
-To see which libraries are installed check teh Dockerfile.
+To see which libraries are installed check the Dockerfile.
 
 This can be used to easily test python-based projects.
