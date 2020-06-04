@@ -45,5 +45,9 @@ RUN yum install -y \
     && yum clean all \
     && rm -rf /var/cache/yum
 
+Run git clone https://github.com/edrakopo/docker_python_ml.git -b python_inLinux;
+Run cd docker_python_ml; 
+Run source Setup.sh;
+
 ### Open terminal
 CMD ["/bin/bash"]

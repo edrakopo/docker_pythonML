@@ -38,6 +38,14 @@ else
     pip3 install sklearn
 fi
 
+#checking if the seaborn package is installed
+if python3 -c 'import pkgutil; exit(not pkgutil.find_loader("seaborn"))'; then
+    echo 'seaborn found'
+else
+    echo 'seaborn not found - installing now...'
+    pip3 install seaborn
+fi
+
 #creating a folder to store outputs: 
 if [ -d "outputs" ]; then
     echo "Directory outputs exists."
