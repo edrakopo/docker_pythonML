@@ -1,18 +1,49 @@
-FROM python:3.7-slim-stretch
+### Download base image
+FROM cern/cc7-base:latest
 
 ### Run the following commands as super user (root):
 USER root
 
-RUN python -m pip install \
-        parse \
-        realpython-reader \
-        numpy \
-        pandas \
-        tensorflow \
-        matplotlib \
-        sklearn \
-        seaborn \
-        pyvim
+RUN yum install -y \
+    wget \
+    tar \
+    cmake \
+    gcc-c++ \
+    gcc \
+    binutils \
+    libX11-devel \
+    libXpm-devel \
+    libXft-devel \
+    libXext-devel \
+    libxml2-devel \
+    libpng \ 
+    libpng-devel \
+    libjpeg-devel \
+    graphviz-devel \
+    mesa-libGL-devel \
+    mesa-libGLU-devel \
+    make \
+    file \
+    git \
+    bzip2-devel	\
+    cvs \			
+    automake \ 		
+    svn  \	 
+    libtool \
+    libxml2 \ 
+    which \
+    gsl-devel \
+    gcc-gfortran \ 
+    python36 \
+    python36-libs \
+    python36-devel \
+    python36-pip \
+    emacs \
+    curl \
+    curl-devel \
+    osg-wn-client \
+    && yum clean all \
+    && rm -rf /var/cache/yum
 
 ### Open terminal
 CMD ["/bin/bash"]
