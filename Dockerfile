@@ -11,7 +11,8 @@ RUN python -m pip install \
         tensorflow \
         matplotlib \
         sklearn \
-        seaborn 
+        seaborn \
+        pyvim
 
 ### Open terminal
 CMD ["/bin/bash"]
