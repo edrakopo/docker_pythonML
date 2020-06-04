@@ -1,3 +1,9 @@
-This project creates and runs a docker container for python 3.7.7. with some basic python libraries (numpy, pandas, tensorflow, matplotlib, sklearn). 
+This project creates and runs a docker container with python3 and main libraries installed to easily test python-based projects. 
 
-This can be used to easily test python-based projects (for example codes of Machine Learning-based projects check: https://github.com/edrakopo/MLAlgorithms.git).
+It has two branches: master and python_inLinux. 
+The master branch creates and runs a docker container for python 3.7.7. with some basic python libraries (numpy, pandas, tensorflow, matplotlib, sklearn). 
+The python_inLinux branch creates and runs a docker container for python 2.7.5 and 3.6.8. in a linux environment (you also have some linux-based commands such as wget, git, gcc etc). 
+
+For quick installation check the "InstallationNotes" on each branch. 
+
+These platforms can be used to easily test python-based projects without having to install libraries and dependencies in your system.
