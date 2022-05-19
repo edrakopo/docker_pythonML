@@ -1,4 +1,5 @@
-FROM python:3.7-slim-stretch
+FROM python:3.9-slim
+#FROM python:3.7-slim-stretch
 
 ### Run the following commands as super user (root):
 USER root
