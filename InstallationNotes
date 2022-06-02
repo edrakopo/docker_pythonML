@@ -1,13 +1,30 @@
 ### Created by Dr. Evangelia Drakopoulou (drakopoulou@inp.demokritos.gr)
+###Notes for docker_python_ml
 
-#notes for docker_python_ml:
-#To build a docker environment and run ML projects follow these steps:
-docker build -t python_ml . #-t python_ml will tag your image with the name python_ml
+#To build a docker environment and run ML projects type the following commands:
+#Step 1: install docker
+sudo snap install docker
+
+#Step 2: Get the repository from Gihub:
+git clone https://github.com/edrakopo/docker_python_ml.git
+
+#Step 3: Build α docker environment to run ML projects:
+docker build -t python_ml .        #-t python_ml will tag your image with the name python_ml
+
+#If you get this error: "Got permission denied while trying to connect to the Docker daemon socket at unix:" run this command:
+sudo chmod 666 /var/run/docker.sock
+Then repeat step 3. 
+
+#Step 4: Create the container:
 docker run --name=Python_3.9_ML -v local_folder:/name_in_container -it python_ml:latest 
 #--name is the container name
 #The --rm option can be added to clean up your container after use.
-# -v local_folder:/name_in_contianer is used to mount a folder inside the container for transferring files in and out of it so just set the local folder you want to put inside and the name you want it to have in the container.
+# -v local_folder:/name_in_container is used to mount a folder inside the container for transferring files in and out of it so just set the local folder you want to put inside and the name you want it to have in the container.
  
-#Now the container is created you dont need to do run any more
+Info: 
+i) Now the container is created you don't need to do run any more
 #To start it at any time just open a terminal and type 
 docker start Python_3.9_ML -i
+
+ii) To copy from your local folder to the container:
+docker cp fromlocal_folder Python_3.9_ML:/name_in_container/.
