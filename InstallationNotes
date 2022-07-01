@@ -5,7 +5,7 @@
 #Step 1: install docker
 sudo snap install docker
 
-#Step 2: Get the repository from Gihub:
+#Step 2: Get the repository from Gihub:  (If git is not installed: sudo apt install git)
 git clone https://github.com/edrakopo/docker_python_ml.git
 cd docker_python_ml
 
